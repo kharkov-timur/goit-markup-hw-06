@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Studio</title>
     <link
       href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
@@ -131,15 +132,6 @@
 
     <main>
       <section class="section order-section">
-        <img
-          class="image"
-          srcset="
-            ./images/order/main-image.jpg    1x,
-            ./images/order/main-image@2x.jpg 2x
-          "
-          src="./images/order/main-image.jpg"
-          alt="desktop-application"
-        />
         <div class="container">
           <h1 class="general-title">Effective Solutions for Your Business</h1>
           <button class="button" type="button" data-modal-open>
@@ -159,7 +151,7 @@
                 </svg>
               </div>
               <h3 class="card-title">Strategy</h3>
-              <p>
+              <p class="feature-section-text">
                 Our goal is to identify the business problem to walk away with
                 the perfect and creative solution.
               </p>
@@ -171,7 +163,7 @@
                 </svg>
               </div>
               <h3 class="card-title">Punctuality</h3>
-              <p>
+              <p class="feature-section-text">
                 Bring the key message to the brand's audience for the best price
                 within the shortest possible time.
               </p>
@@ -183,7 +175,7 @@
                 </svg>
               </div>
               <h3 class="card-title">Diligence</h3>
-              <p>
+              <p class="feature-section-text">
                 Research and confirm brands that present the strongest digital
                 growth opportunities and minimize risk.
               </p>
@@ -195,7 +187,7 @@
                 </svg>
               </div>
               <h3 class="card-title">Technologies</h3>
-              <p>
+              <p class="feature-section-text">
                 Design practice focused on digital experiences. We bring forth a
                 deep passion for problem-solving.
               </p>
@@ -613,8 +605,10 @@
             ></textarea>
           </label>
           <label class="policy-label">
-            I accept the terms and conditions of the
-            <a href="#" class="policy-link">Privacy Policy</a>
+            <p>
+              I accept the terms and conditions of the
+              <a href="#" class="policy-link">Privacy Policy</a>
+            </p>
             <input type="checkbox" value="policy" class="policy-checkbox" />
             <span class="checkmark">
               <svg class="checkmark-icon">

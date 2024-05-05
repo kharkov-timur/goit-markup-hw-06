@@ -187,22 +187,30 @@ ul {
 }
 
 .order-section {
-  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
   text-align: center;
   padding: 112px 0;
   color: var(--secondary-text-color);
   background-color: rgba(46, 47, 66, 0.7);
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url('../images/order/main-image.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-.order-section .image {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  max-width: 1440px;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+@media (min-resolution: 192dpi) {
+  .order-section {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/order/main-image@2x.jpg');
+  }
 }
 
 .button {
@@ -229,8 +237,17 @@ ul {
   gap: 72px;
 }
 
+.feature-section-item .card-title {
+  font-size: 36px;
+  font-weight: 700;
+}
+
 .feature-section-logo {
   display: none;
+}
+
+.feature-section-text {
+  text-align: left;
 }
 
 .skills-section {
@@ -250,7 +267,7 @@ ul {
 }
 
 .team-card {
-  /*max-width: 264px;*/
+  max-width: 264px;
   border-radius: 0 0 4px 4px;
   background-color: var(--background-color);
   box-shadow:
@@ -451,7 +468,6 @@ ul {
 .footer-social-title {
   font-size: 16px;
   font-weight: 500;
-  margin-bottom: 16px;
 }
 
 .footer-social {
@@ -473,6 +489,7 @@ ul {
 
 .footer-form {
   width: 100%;
+  text-align: center;
 }
 
 .subscribe-form {
@@ -481,6 +498,10 @@ ul {
   gap: 16px;
   align-items: center;
   width: 100%;
+}
+
+.footer-form .footer-social-title {
+  margin-bottom: 16px;
 }
 
 .subscribe-form .form-input {
@@ -656,6 +677,7 @@ ul {
 
 .policy-link {
   color: #4d5ae5;
+  text-wrap: nowrap;
 }
 
 .checkmark-icon {
@@ -837,6 +859,7 @@ ul {
   font-size: 36px;
   font-weight: 700;
   line-height: 40px;
+  color: #4d5ae5;
 }
 
 .email-link {
@@ -870,6 +893,10 @@ ul {
 }
 
 @media (min-width: 768px) and (max-width: 1157px) {
+  .feature-section .container {
+    max-width: 584px;
+  }
+
   .navigation {
     display: flex;
     align-items: center;
@@ -914,15 +941,21 @@ ul {
   .feature-section-items {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 24px;
+    column-gap: 24px;
+    row-gap: 72px;
   }
 
   .feature-section-item {
     flex-basis: calc((100% - 24px) / 2);
+    text-align: left;
   }
 
   .team-section {
     padding: 96px 0;
+  }
+
+  .team-section .container {
+    max-width: 584px;
   }
 
   .team-section-items {
@@ -937,6 +970,10 @@ ul {
 
   .portfolio-section {
     padding: 64px 0;
+  }
+
+  .portfolio-section .container {
+    max-width: 584px;
   }
 
   .portfolio-items {
@@ -958,6 +995,10 @@ ul {
     padding: 96px 0;
   }
 
+  .customers-section .container {
+    max-width: 584px;
+  }
+
   .customers-section-item {
     flex-basis: calc((100% - 48px) / 3);
   }
@@ -971,14 +1012,13 @@ ul {
   .footer .container {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 24px;
-  }
-
-  .footer-item {
-    flex-basis: calc((100% - 24px) / 2);
+    column-gap: 24px;
+    row-gap: 72px;
+    max-width: 584px;
   }
 
   .footer-info {
+    max-width: 264px;
     align-items: start;
   }
 
@@ -988,6 +1028,14 @@ ul {
 
   .subscribe-form {
     flex-direction: row;
+  }
+
+  .subscribe-form .form-input {
+    max-width: 264px;
+  }
+
+  .footer-social-title {
+    text-align: left;
   }
 }
 
@@ -1031,6 +1079,7 @@ ul {
 
   .feature-section-items {
     flex-direction: row;
+    gap: 24px;
   }
 
   .feature-section-item {
@@ -1050,6 +1099,15 @@ ul {
   .feature-section-icon {
     width: 64px;
     height: 64px;
+  }
+
+  .feature-section-item {
+    text-align: left;
+  }
+
+  .feature-section-item .card-title {
+    font-size: 20px;
+    font-weight: 500;
   }
 
   .skills-section {
@@ -1115,15 +1173,21 @@ ul {
 
   .footer .container {
     flex-direction: row;
-    gap: 120px;
+    gap: 0;
   }
 
   .footer-info {
     align-items: start;
+    margin-right: 120px;
   }
 
   .footer-social {
     align-items: start;
+    margin-right: 80px;
+  }
+
+  .footer-social-title {
+    text-align: left;
   }
 
   .subscribe-form {
