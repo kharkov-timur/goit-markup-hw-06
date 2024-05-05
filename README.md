@@ -1,3 +1,3 @@
-# goit-markup-hw-05
+# goit-markup-hw-06
 
-## Implemented modal form
+## Implemented responsive view
